@@ -13,7 +13,7 @@ public class SendMailSSL {
 	
 	public static void send(String companyName, String recipientEmailID) {
 		Properties props = new Properties();
-		props.put("mail.smtp.host", "md-in-83.webhostbox.net");
+		props.put("mail.smtp.host", "SMTP-HOST");
 		props.put("mail.smtp.socketFactory.port", "465 ");
 		props.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 		props.put("mail.smtp.auth", "true");
@@ -22,7 +22,7 @@ public class SendMailSSL {
 		Session session = Session.getDefaultInstance(props,
 			new javax.mail.Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("nikhil.bhole@domsit.com","nikhilmae");
+					return new PasswordAuthentication("mail@id.com","password");
 				}
 			});
 
